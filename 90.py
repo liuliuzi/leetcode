@@ -17,3 +17,4 @@ if __name__=='__main__':
     S=[1,2,2]
     S=[0]
     result=st.subsetsWithDup(S)
+    print result
