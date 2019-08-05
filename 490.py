@@ -9,6 +9,7 @@ Input 2: start coordinate (rowStart, colStart) = (0, 4)
 Input 3: destination coordinate (rowDest, colDest) = (4, 4)
 Output: true
 '''
+import copy
 class Solution(object):
     
     def hasPath(self, maze, start, destination):
@@ -97,6 +98,10 @@ maze=[[0, 0, 1, 0, 0],
       [0, 0, 0, 0, 0]]
 start=[0,4]
 destination=[4,4]
+maze2=copy.copy(maze)
+start2=[0,4]
+destination2=[3,2]
 
-print sol.hasPath(maze, start, destination)
+#print sol.hasPath(maze, start, destination)
+print sol.hasPath(maze2, start2, destination2)
 
