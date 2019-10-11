@@ -1,0 +1,18 @@
+class Solution(object):
+    def findLonelyPixel(self, picture):
+        """
+        :type picture: List[List[str]]
+        :rtype: int
+        """
+        rows, cols = [0] * len(picture),  [0] * len(picture[0])
+        for i in range(len(picture)):
+            for j in range(len(picture[0])):
+                if picture[i][j]=='B':
+                    rows[i]+=1
+                    rows[j]+=1
+        result = 0
+        for i in range(len(picture)):
+            if rows[i] == 1:
+                for j in range(len(picture[0])):
+                    result += picture[i][j] == 'B' and cols[j] == 1
+        return result
